@@ -1,8 +1,9 @@
 import React from 'react';
-import { useGoogleLogin } from 'react-use-googlelogin';
+import { useGoogleAuth } from './googleAuth';
 
 const Profile = () => {
-    const { googleUser } = useGoogleLogin()
+    const { googleUser } = useGoogleAuth()
+    if(!googleUser) return null
 
     return (
         <div>
